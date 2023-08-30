@@ -23,17 +23,47 @@ body {
 }
 
 .container {
-    width: 90%;
+    
     margin: 0 auto;
     padding: 0 15px;
     /* background-color: greenyellow; */
 }
 
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 0 15px;
+}
+
+/*!  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+    .container {
+        width: 750px;
+    }
+}
+
+/*! Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*! Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container {
+        width: 1170px;
+    }
+}
+
+/*! End media  */
+
+
 /* Start header */
 
 header {
     background-color: #333333ca;
-    border-radius: 0px 0px 40px 40px;
 }
 
 header .container {
@@ -43,7 +73,6 @@ header .container {
 }
 
 header .container .links {
-
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -81,12 +110,14 @@ header .container .links ul li a {
 .parent .container .dec h1 {
     font-weight: bold;
     color: #FFF;
+    text-align: center;
 }
 
 .parent .container .dec p {
     font-size: 19px;
     line-height: 1.6;
     color: #FFF;
+    text-align: center;
 }
 
 .parent .container .form  {
@@ -139,4 +170,73 @@ header .container .links ul li a {
     color: #f6f6f6;
     cursor: pointer;
     background: linear-gradient(to right, #333, #eee);
+}
+
+header .container .links i {
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+header .container .links {
+    position: relative;
+}
+
+@media (max-width: 768px) {  
+
+    .parent .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100% ;
+        align-items: center;
+        font-size: 10px;
+        justify-content: center;
+        gap: 54px;
+        
+}
+    .parent .container .form .input_label .inp_one, .inp_two {
+        width: 100%;
+        padding: 15px 10px;
+        border: 0;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        outline: 0;
+    }
+
+    .parent .container .form .input_felids {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+        text-align: center;
+    }
+    header .container .links ul {
+        display: none;
+    }
+
+    header .container .links i:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 169%;
+        gap: 29px;
+        width: fit-content;
+        margin-right: 10px;
+        background-color: #333333d1;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    header .container .links i:hover + ul li a {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 820px) {
+    
+header .container .links i {
+    display: none;
+}
 }
