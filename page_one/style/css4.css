@@ -12,14 +12,19 @@ a {
 }
 
 body {
-    background-image: url(https://img.freepik.com/free-photo/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg?w=1060&t=st=1693377576~exp=1693378176~hmac=5fc97cf12e1d4c4bab1ca797f9209f3ed7b218f9318f646328dab43f84f5913e);
+    background-image: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: cover;  
     font-family: sans-serif;
+    background-position: center;
+}
+
+:root {
+    --main-color: #090580;
 }
 
 .parent {
-    height: calc(100vh - 60px );
+    height: calc(100vh - 80px );
 }
 
 .container {
@@ -63,7 +68,8 @@ body {
 /* Start header */
 
 header {
-    background-color: #333333ca;
+    background-color: transparent;
+    padding: 10px 0px;
 }
 
 header .container {
@@ -89,7 +95,7 @@ header .container .links ul {
 }
 
 header .container .links ul li a {
-    color: #FFF;
+    color: var(--main-color);
     font-size: 19px;
 }
 
@@ -109,14 +115,15 @@ header .container .links ul li a {
 
 .parent .container .dec h1 {
     font-weight: bold;
-    color: #FFF;
+    color: var(--main-color);
     text-align: center;
+    text-transform: uppercase;
 }
 
 .parent .container .dec p {
     font-size: 19px;
     line-height: 1.6;
-    color: #FFF;
+    color: var(--main-color);
     text-align: center;
 }
 
@@ -138,6 +145,7 @@ header .container .links ul li a {
     border-radius: 10px;
     margin-bottom: 10px;
     outline: 0;
+    background-color: #E8A9A9;
 }
 
 .parent .container .form  .input_felids {
@@ -149,7 +157,7 @@ header .container .links ul li a {
 .input_felids_1
 {
     text-decoration: none;
-    color: #FFF;
+    color: var(--main-color);
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -160,7 +168,6 @@ header .container .links ul li a {
 }
 
 .parent .container .form  .log button {
-    /* text-align: center; */
     padding: 15px 40px;
     border-radius: 10px;
     font-size: 16px;
@@ -169,12 +176,18 @@ header .container .links ul li a {
     border: 0;
     color: #f6f6f6;
     cursor: pointer;
-    background: linear-gradient(to right, #333, #eee);
+    background: linear-gradient(to right, var(--main-color), #46458C);
 }
 
 header .container .links i {
     font-size: 24px;
     margin-right: 30px;
+}
+
+header .container .links a:hover {
+    color: #46458C;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #46458C;
 }
 
 header .container .links {
@@ -201,7 +214,7 @@ header .container .links {
         border-radius: 10px;
         margin-bottom: 10px;
         outline: 0;
-    }
+}
 
     .parent .container .form .input_felids {
         display: flex;
@@ -209,29 +222,39 @@ header .container .links {
         justify-content: space-around;
         gap: 20px;
         text-align: center;
-    }
+}
+
     header .container .links ul {
         display: none;
-    }
+}
 
     header .container .links i:hover + ul {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 169%;
-        gap: 29px;
+        top: 91%;
+        right: 19px;
+        gap: 0px;
         width: fit-content;
         margin-right: 10px;
-        background-color: #333333d1;
+        background-color: var(--main-color);
         padding: 10px;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 400;   
+        cursor: pointer;
     }
 
     header .container .links i:hover + ul li a {
         font-size: 14px;
         font-weight: 400;
+        text-align: center;
     }
+
+    header .container .links i:hover + ul li {
+        padding: 10px 40px;
+        margin-bottom: 10px;
+        background-color: var(--main-color);
+}
 }
 
 @media (min-width: 820px) {
