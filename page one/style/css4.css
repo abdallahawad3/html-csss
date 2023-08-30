@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+body {
+    background-image: url(https://img.freepik.com/free-photo/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg?w=1060&t=st=1693377576~exp=1693378176~hmac=5fc97cf12e1d4c4bab1ca797f9209f3ed7b218f9318f646328dab43f84f5913e);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    font-family: sans-serif;
+}
+
+.parent {
+    height: calc(100vh - 60px );
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* background-color: greenyellow; */
+}
+
+/* Start header */
+
+header {
+    background-color: #333333ca;
+    border-radius: 0px 0px 40px 40px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .links {
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .container .links ul {
+    display: flex;
+    gap: 20px;
+}
+
+header .container .links ul {
+    display: flex;
+    gap: 90px;
+}
+
+header .container .links ul li a {
+    color: #FFF;
+    font-size: 19px;
+}
+
+/* End header */
+
+.parent .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.parent .container .dec {
+    /* background-color: aqua; */
+    width: 50%;
+}
+
+.parent .container .dec h1 {
+    font-weight: bold;
+    color: #FFF;
+}
+
+.parent .container .dec p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #FFF;
+}
+
+.parent .container .form  {
+    /* background-color: rebeccapurple; */
+    width: 50%;
+}
+
+.parent .container .form .input_label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.parent .container .form .input_label .inp_one,.inp_two {
+    width: 70%;
+    padding: 15px 10px;
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: 0;
+}
+
+.parent .container .form  .input_felids {
+    display: flex;
+    justify-content: space-around;
+}
+
+.parent .container .form  .input_felids .input_felids_2 a,
+.input_felids_1
+{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.parent .container .form  .log {
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.parent .container .form  .log button {
+    /* text-align: center; */
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    color: #f6f6f6;
+    cursor: pointer;
+    background: linear-gradient(to right, #333, #eee);
+}
